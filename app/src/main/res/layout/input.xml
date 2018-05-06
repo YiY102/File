@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.main.file.InputActivity"
+    android:orientation="vertical"
+    android:background="#F1E9DB">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="입력화면"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#716A5C">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/storename_tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="가게이름"
+
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/storename"
+         />
+        <EditText
+            android:id="@+id/storename_etv"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="맥도날드"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="지      역"
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/location"
+            />
+        <Spinner
+            android:layout_marginLeft="20dp"
+            android:id="@+id/AreaSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/storefood_tv"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사      진"
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img0"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/imgAdd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추가하기"/>
+
+       <TextView
+           android:layout_marginTop="10dp"
+           android:id="@+id/leview_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="후      기"
+           android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/layout_border">
+       <EditText
+           android:id="@+id/leview_etv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="내용입력하는 칸"
+           />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/write_suc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성완료"/>
+
+
+   </LinearLayout>
+
+
+
+
