@@ -5,19 +5,23 @@
     >
 
     <TextView
-        android:id="@+id/storename_lv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="가게이름"/>
-
-    <TextView
         android:id="@+id/storelocation_lv"
-        android:layout_marginLeft="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:text="지역"/>
+    <TextView
+         android:layout_marginLeft="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="에 위치한"/>
+    <TextView
+        android:id="@+id/storename_lv"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="이름"/>
 
 
 </LinearLayout>

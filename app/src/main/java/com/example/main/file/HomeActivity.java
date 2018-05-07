@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<Content>HomeArraylist = new ArrayList<>();
     ListViewAdapter listViewAdapter;
     Content content;
-    DbManager dbManager;
+   // DbManager dbManager;
 
 
 
@@ -37,8 +37,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home);
         ButterKnife.bind(this);
 
-      dbManager = new DbManager(
-                HomeActivity.this,"Yang.db",null,1);
+     /* dbManager = new DbManager(
+                HomeActivity.this,"Yang.db",null,1);*/
 
         listViewAdapter = new ListViewAdapter(HomeArraylist,HomeActivity.this);
         content_listview.setAdapter(listViewAdapter);
@@ -50,9 +50,10 @@ public class HomeActivity extends AppCompatActivity {
 
               Intent intent = new Intent(getApplicationContext(),DetailActivity.class);
                 intent.putExtra("storename",item.getName());
-                intent.putExtra("storeleview",item.getLeview());
+                intent.putExtra("storereview",item.getReview());
                 intent.putExtra("strorelocation",item.getLocation());
-
+                intent.putExtra("writetime",item.getTime());
+                intent.putExtra("storescore",item.getScore());
 
 
                 startActivity(intent);
@@ -79,15 +80,17 @@ public class HomeActivity extends AppCompatActivity {
         if (requestCode==0) {
             if (resultCode == RESULT_OK) {
                 String name = data.getStringExtra("name");
-                String leview = data.getStringExtra("leview");
+                String review = data.getStringExtra("review");
                 String location= data.getStringExtra("location");
-                 dbManager.insertData(name,leview,location);
-                content = new Content(name,leview,location);
+                String time = data.getStringExtra("time");
+                String score = data.getStringExtra("score");
+//                 dbManager.insertData(name,review,location);
+                content = new Content(name,review,location,time,score);
                 HomeArraylist.add(content);
                 listViewAdapter = new ListViewAdapter(HomeArraylist, HomeActivity.this);
                 content_listview.setAdapter(listViewAdapter);
 
-                Log.d("yyytest","Db : "+dbManager);
+
             }
         }
     }

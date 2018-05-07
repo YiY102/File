@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
  */
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
 public class ListViewAdapter extends BaseAdapter{
     ArrayList<Content>items = new ArrayList<>();
      Context context;

@@ -17,9 +17,11 @@ import butterknife.OnClick;
  */
 
 public class DetailActivity extends AppCompatActivity {
-    @BindView(R.id.id_detail_text) TextView id_detail_text;
-    @BindView(R.id.id_detail_text2) TextView id_detail_text2;
-    @BindView(R.id.id_detail_text3) TextView id_detail_text3;
+    @BindView(R.id.detail_name) TextView detail_name;
+    @BindView(R.id.detail_review) TextView detail_review;
+    @BindView(R.id.detail_location) TextView detail_location;
+    @BindView(R.id.detail_writetime) TextView detail_writetime;
+    @BindView(R.id.detail_score) TextView detail_score;
     @BindView(R.id.id_detail_back_btn) Button id_detail_back_btn;
 
     @Override
@@ -30,10 +32,11 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        id_detail_text.setText(intent.getStringExtra("storename"));
-        id_detail_text2.setText(intent.getStringExtra("storeleview"));
-        id_detail_text3.setText(intent.getStringExtra("strorelocation"));
-
+        detail_name.setText(intent.getStringExtra("storename"));
+        detail_review.setText(intent.getStringExtra("storereview"));
+        detail_location.setText(intent.getStringExtra("strorelocation"));
+        detail_writetime.setText(intent.getStringExtra("writetime"));
+        detail_score.setText(intent.getStringExtra("storescore"));
 
 
     }

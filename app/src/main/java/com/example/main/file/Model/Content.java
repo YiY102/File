@@ -14,8 +14,10 @@ import lombok.NoArgsConstructor;
 public class Content {
 
     String name;
-    String leview;
+    String review;
     String location;
+    String time;
+    String score;
 
 
 }
