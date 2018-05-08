@@ -1,6 +1,7 @@
 package com.example.main.file;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -29,9 +30,20 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail);
         ButterKnife.bind(this);
+
+        Typeface text = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
+        detail_name.setTypeface(text);
+        detail_name.setSingleLine(true);
+        detail_review.setTypeface(text);
+        detail_location.setTypeface(text);
+        detail_writetime.setTypeface(text);
+        detail_score.setTypeface(text);
+
+
+
+
+
         Intent intent = getIntent();
-
-
         detail_name.setText(intent.getStringExtra("storename"));
         detail_review.setText(intent.getStringExtra("storereview"));
         detail_location.setText(intent.getStringExtra("strorelocation"));

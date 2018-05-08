@@ -21,11 +21,19 @@
         android:layout_height="300dp"
 
         />
-    <Button
-        android:id="@+id/listAdd_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="추가하기"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/listAdd_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/plus"/>
+    </RelativeLayout>
+
 
 
 </LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.main.file;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -11,11 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,17 +44,18 @@ public class InputActivity extends AppCompatActivity {
     @BindView(R.id.storefood_tv)    TextView storefood_tv;
     @BindView(R.id.review_tv)    TextView review_tv;
     @BindView(R.id.review_etv)    EditText review_etv;
-    @BindView(R.id.img0)    ImageView img0;
+
     @BindView(R.id.imgAdd_btn)    Button imgAdd_btn;
     @BindView(R.id.write_suc)    Button write_suc;
-    @BindView(R.id.WriteTime)    TextView WriteTime;
+    @BindView(R.id.photoView)    ImageView photoView;
+    InputMethodManager imm;
 
     String storescore;
     long now = System.currentTimeMillis();
     Date date = new Date(now);
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     String formatDate = sdfNow.format(date);
-
+    private static int PICK_IMAGE_REQUEST = 1;
 
 
     @Override
@@ -58,12 +63,20 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
         ButterKnife.bind(this);
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/baemin.ttf");
+        Typeface text = Typeface.createFromAsset(getAssets(), "fonts/baemin.ttf");
+        Typeface edit = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
+        imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
 
-        storename_tv.setTypeface(font1);
-        location_tv.setTypeface(font1);
-        storefood_tv.setTypeface(font1);
-        review_tv.setTypeface(font1);
+
+
+        storename_tv.setTypeface(text);
+        location_tv.setTypeface(text);
+        storefood_tv.setTypeface(text);
+        review_tv.setTypeface(text);
+
+        storename_etv.setBackground(null);
+        review_etv.setBackground(null);
+
 //지역스피너
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.location, android.R.layout.simple_spinner_item);
         AreaSpinner.setAdapter(adapter);
@@ -87,7 +100,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClickedButton(RadioRealButton button, int position) {
             //Toast.makeText(InputActivity.this, "Position: " + position, Toast.LENGTH_SHORT).show();
                 if (position==0){
-                    storescore = "좋음";
+                    storescore = "아주 좋아요";
                 }else if (position==1){
                     storescore = "중간";
                 }else if(position==2){
@@ -98,12 +111,16 @@ public class InputActivity extends AppCompatActivity {
 
 
     }//oncreate 끝
-
+    //로드버튼 클릭시 실행
     @OnClick(R.id.imgAdd_btn)
     public void setImgAdd_btn(View view) {
-
-
     }
+
+
+
+
+
+
     @OnClick(R.id.write_suc)
     public void setWrite_suc(View view) {
         String name = storename_etv.getText().toString();
@@ -120,7 +137,14 @@ public class InputActivity extends AppCompatActivity {
         setResult(RESULT_OK,homeintent);
         finish();
 
+    }
 
+
+
+    public void setLayoutTouch(View view){
+        imm.hideSoftInputFromWindow(review_etv.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(storename_etv.getWindowToken(), 0);
 
     }
+
 }
