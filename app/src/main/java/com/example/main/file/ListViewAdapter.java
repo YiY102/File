@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,12 +49,18 @@ public class ListViewAdapter extends BaseAdapter{
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
         Holder holder = new Holder();
+
         if (view == null) {
             view = LayoutInflater.from(viewGroup.getContext()).
                     inflate(R.layout.listview_item, viewGroup, false);
+
             holder.storelocation_lv = view.findViewById(R.id.storelocation_lv);
             holder.storename_lv = view.findViewById(R.id.storename_lv);
+            holder.storelocation_lv.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),"fonts/dongrami.ttf"));
+            holder.storename_lv.setTypeface(Typeface.createFromAsset(view.getContext().getAssets(),"fonts/dongrami.ttf"));
+
             view.setTag(holder);
+
         } else {
             holder = (Holder) view.getTag();
         }

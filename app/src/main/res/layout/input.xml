@@ -7,33 +7,38 @@
     android:layout_height="match_parent"
     tools:context="com.example.main.file.InputActivity"
     android:orientation="vertical"
-    android:background="#F1E9DB">
+   >
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:textSize="20dp"
-        android:text="입력화면"
+        android:text="맛집리스트에 저장하는중..."
         android:gravity="center"
+        android:background="#EEE2DF"
         android:layout_marginBottom="10dp"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#716A5C">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    </View>
 
     <LinearLayout
        android:onClick="setLayoutTouch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+
         android:orientation="horizontal">
         <TextView
+
             android:id="@+id/storename_tv"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="가게이름"
-
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
 
         <EditText
             android:id="@+id/storename_etv"
@@ -42,19 +47,19 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="맥도날드"/>
-    </LinearLayout>
+    </LinearLayout> <!--가게이름-->
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/location_tv"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="지      역"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
 
         <Spinner
             android:layout_marginLeft="20dp"
@@ -63,50 +68,58 @@
             android:layout_height="wrap_content"
             />
 
-    </LinearLayout>
+    </LinearLayout> <!--지역스피너-->
 
     <TextView
+        android:padding="10dp"
         android:id="@+id/storefood_tv"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="사      진"
-        android:textSize="20dp"/>
+        android:textSize="15dp"/>
     <LinearLayout
-        android:layout_marginTop="10dp"
+
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
         <ImageView
             android:id="@+id/photoView"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:background="#C97C5D"
             />
 
     </LinearLayout>
     <Button
         android:id="@+id/imgAdd_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="추가하기"/>
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/addphoto"
+      />
 
        <TextView
+           android:padding="10dp"
            android:layout_marginTop="10dp"
            android:id="@+id/review_tv"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="후      기"
-           android:textSize="20dp"/>
+           android:textSize="15dp"/>
     <LinearLayout
         android:onClick="setLayoutTouch"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="@drawable/layout_border"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
 
 
        <EditText
+
            android:id="@+id/review_etv"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -118,6 +131,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="이 가게 어떘어요?"/>
 
     <co.ceryle.radiorealbutton.RadioRealButtonGroup
@@ -198,11 +212,12 @@
 
     <Button
         android:id="@+id/write_suc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="작성완료"/>
-
-
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+       android:background="@drawable/checked"/>
+</LinearLayout><!--스크롤뷰를위한 레이아웃-->
+</ScrollView>
    </LinearLayout>
 
 
