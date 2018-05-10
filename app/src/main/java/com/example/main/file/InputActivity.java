@@ -37,6 +37,7 @@ import co.ceryle.radiorealbutton.RadioRealButtonGroup;
 
 public class InputActivity extends AppCompatActivity {
 
+
     @BindView(R.id.AreaSpinner)    Spinner AreaSpinner;
     @BindView(R.id.storename_tv)    TextView storename_tv;
     @BindView(R.id.storename_etv)    EditText storename_etv;
@@ -66,7 +67,8 @@ public class InputActivity extends AppCompatActivity {
         Typeface text = Typeface.createFromAsset(getAssets(), "fonts/baemin.ttf");
         Typeface edit = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
         imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-
+        imm.hideSoftInputFromWindow(review_etv.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(storename_etv.getWindowToken(), 0);
 
 
         storename_tv.setTypeface(text);
@@ -140,11 +142,11 @@ public class InputActivity extends AppCompatActivity {
     }
 
 
-
-    public void setLayoutTouch(View view){
-        imm.hideSoftInputFromWindow(review_etv.getWindowToken(), 0);
+    @OnClick
+    public void setMainlayout(View view){
+        imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(storename_etv.getWindowToken(), 0);
-
+        imm.hideSoftInputFromWindow(review_etv.getWindowToken(), 0);
     }
 
 }

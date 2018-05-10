@@ -1,6 +1,7 @@
 package com.example.main.file;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.main.file.DB.DbManager;
@@ -23,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @BindView(R.id.content_listview)  ListView content_listview;
     @BindView(R.id.listAdd_btn)    Button listAdd_btn;
-
+    @BindView(R.id.titlebar)    TextView titlebar;
     ArrayList<Content>HomeArraylist = new ArrayList<>();
     ListViewAdapter listViewAdapter;
     Content content;
@@ -39,7 +41,8 @@ public class HomeActivity extends AppCompatActivity {
 
      /* dbManager = new DbManager(
                 HomeActivity.this,"Yang.db",null,1);*/
-
+        Typeface titlefont = Typeface.createFromAsset(getAssets(), "fonts/baemin.ttf");
+        titlebar.setTypeface(titlefont);
         listViewAdapter = new ListViewAdapter(HomeArraylist,HomeActivity.this);
         content_listview.setAdapter(listViewAdapter);
 

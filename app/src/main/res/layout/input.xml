@@ -7,8 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.main.file.InputActivity"
     android:orientation="vertical"
+   android:onClick="setMainlayout"
    >
     <TextView
+
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textSize="20dp"
@@ -20,20 +22,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 <LinearLayout
+    android:onClick="setMainlayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
 
     <LinearLayout
-       android:onClick="setLayoutTouch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-
         android:orientation="horizontal">
         <TextView
-
+            android:layout_gravity="center"
             android:id="@+id/storename_tv"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -46,15 +47,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="맥도날드"/>
+            android:hint="여기 이름이 뭐예요?"/>
     </LinearLayout> <!--가게이름-->
 
     <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="horizontal">
         <TextView
+            android:layout_gravity="center"
             android:id="@+id/location_tv"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -62,7 +65,7 @@
             android:textSize="15dp"/>
 
         <Spinner
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/AreaSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,16 +74,17 @@
     </LinearLayout> <!--지역스피너-->
 
     <TextView
+
         android:padding="10dp"
         android:id="@+id/storefood_tv"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="사      진"
         android:textSize="15dp"/>
     <LinearLayout
 
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
         <ImageView
@@ -100,6 +104,7 @@
       />
 
        <TextView
+
            android:padding="10dp"
            android:layout_marginTop="10dp"
            android:id="@+id/review_tv"
@@ -108,7 +113,7 @@
            android:text="후      기"
            android:textSize="15dp"/>
     <LinearLayout
-        android:onClick="setLayoutTouch"
+
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="130dp"
@@ -119,11 +124,11 @@
 
 
        <EditText
-
+           android:padding="12dp"
            android:id="@+id/review_etv"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:hint="내용입력하는 칸"
+           android:hint="같이 기억에 남길래요?"
            android:background="@null"
            />
 
@@ -132,7 +137,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="이 가게 어떘어요?"/>
+        android:text="이 가게 만족해요?"/>
 
     <co.ceryle.radiorealbutton.RadioRealButtonGroup
         android:id="@+id/radioRealButtonGroup_2"
@@ -211,6 +216,7 @@
 
 
     <Button
+        android:layout_margin="15dp"
         android:id="@+id/write_suc"
         android:layout_width="40dp"
         android:layout_height="40dp"
