@@ -137,9 +137,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="이 가게 만족해요?"/>
+        android:text="이 가게 어떄요?"/>
 
-    <co.ceryle.radiorealbutton.RadioRealButtonGroup
+    <com.willy.ratingbar.ScaleRatingBar
+        android:gravity="center"
+        android:id="@+id/rotationratingbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ratingbarsize"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        app:srb_starWidth="40dp"
+        app:srb_starHeight="40dp"
+        app:srb_numStars="5"
+        app:srb_rating="0"
+        app:srb_stepSize="0.5"
+        app:srb_drawableEmpty="@drawable/ratingempty"
+        app:srb_drawableFilled="@drawable/ratingfull"
+
+       >
+
+    </com.willy.ratingbar.ScaleRatingBar>
+
+   <!-- <co.ceryle.radiorealbutton.RadioRealButtonGroup
         android:id="@+id/radioRealButtonGroup_2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -170,7 +191,7 @@
         app:rrbg_selectorRadius="1dp"
         app:rrbg_selectorSize="2dp"
         app:rrbg_selectorTop="true">
-        <!-- app:rrbg_animateDrawables_scale="0.7"는 클릭한버튼 사이즈조절-->
+         app:rrbg_animateDrawables_scale="0.7"는 클릭한버튼 사이즈조절
         <co.ceryle.radiorealbutton.RadioRealButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -185,7 +206,7 @@
             app:rrb_textTypefacePath="fonts/aniron.ttf"
 
             />
-            <!--ripple은 번짐효과-->
+            ripple은 번짐효과
         <co.ceryle.radiorealbutton.RadioRealButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -211,8 +232,7 @@
             app:rrb_textColor="@color/black"
             app:rrb_textSize="12dp"
             app:rrb_textTypefacePath="fonts/aniron.ttf"/>
-    </co.ceryle.radiorealbutton.RadioRealButtonGroup>
-
+    </co.ceryle.radiorealbutton.RadioRealButtonGroup>-->
 
 
     <Button

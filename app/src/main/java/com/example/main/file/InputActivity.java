@@ -24,6 +24,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.willy.ratingbar.ScaleRatingBar;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -57,6 +59,7 @@ public class InputActivity extends AppCompatActivity {
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     String formatDate = sdfNow.format(date);
     private static int PICK_IMAGE_REQUEST = 1;
+
 
 
     @Override
@@ -96,7 +99,7 @@ public class InputActivity extends AppCompatActivity {
             }
         });
 //커스텀라디오버튼
-        RadioRealButtonGroup group2 = (RadioRealButtonGroup) findViewById(R.id.radioRealButtonGroup_2);
+       /* RadioRealButtonGroup group2 = (RadioRealButtonGroup) findViewById(R.id.radioRealButtonGroup_2);
         group2.setOnClickedButtonListener(new RadioRealButtonGroup.OnClickedButtonListener() {
             @Override
             public void onClickedButton(RadioRealButton button, int position) {
@@ -111,7 +114,7 @@ public class InputActivity extends AppCompatActivity {
             }
         });
 
-
+*/
     }//oncreate 끝
     //로드버튼 클릭시 실행
     @OnClick(R.id.imgAdd_btn)
