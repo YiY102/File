@@ -20,10 +20,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.willy.ratingbar.BaseRatingBar;
 import com.willy.ratingbar.ScaleRatingBar;
 
 import java.io.FileNotFoundException;
@@ -54,12 +56,12 @@ public class InputActivity extends AppCompatActivity {
     InputMethodManager imm;
 
     String storescore;
+
     long now = System.currentTimeMillis();
     Date date = new Date(now);
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     String formatDate = sdfNow.format(date);
-    private static int PICK_IMAGE_REQUEST = 1;
-
+    @BindView(R.id.scaleRatingBar)  ScaleRatingBar scaleRatingBar;
 
 
     @Override
@@ -69,10 +71,6 @@ public class InputActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Typeface text = Typeface.createFromAsset(getAssets(), "fonts/baemin.ttf");
         Typeface edit = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
-        imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(review_etv.getWindowToken(), 0);
-        imm.hideSoftInputFromWindow(storename_etv.getWindowToken(), 0);
-
 
         storename_tv.setTypeface(text);
         location_tv.setTypeface(text);
@@ -89,7 +87,7 @@ public class InputActivity extends AppCompatActivity {
         AreaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("test","선택된값은"+i);
+
 
             }
 
@@ -98,6 +96,10 @@ public class InputActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
 //커스텀라디오버튼
        /* RadioRealButtonGroup group2 = (RadioRealButtonGroup) findViewById(R.id.radioRealButtonGroup_2);
         group2.setOnClickedButtonListener(new RadioRealButtonGroup.OnClickedButtonListener() {
@@ -113,10 +115,20 @@ public class InputActivity extends AppCompatActivity {
                 }
             }
         });
+        */
 
-*/
+        scaleRatingBar.setOnRatingChangeListener(new BaseRatingBar.OnRatingChangeListener() {
+            @Override
+            public void onRatingChange(BaseRatingBar ratingBar, float rating) {
+                storescore   =  String.valueOf(rating);
+            }
+        });
+
     }//oncreate 끝
     //로드버튼 클릭시 실행
+
+
+
     @OnClick(R.id.imgAdd_btn)
     public void setImgAdd_btn(View view) {
     }
@@ -132,7 +144,6 @@ public class InputActivity extends AppCompatActivity {
         String review = review_etv.getText().toString();
         String location = AreaSpinner.getSelectedItem().toString();
         String time = formatDate;
-
         Intent homeintent = getIntent();
         homeintent.putExtra("name",name);
         homeintent.putExtra("review",review);

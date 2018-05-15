@@ -23,7 +23,10 @@ public class DetailActivity extends AppCompatActivity {
     @BindView(R.id.detail_review) TextView detail_review;
     @BindView(R.id.detail_location) TextView detail_location;
     @BindView(R.id.detail_writetime) TextView detail_writetime;
+
     @BindView(R.id.detail_score) TextView detail_score;
+    @BindView(R.id.score_tv) TextView score_tv;
+    @BindView(R.id.score_tv2) TextView score_tv2;
     @BindView(R.id.id_detail_back_btn) Button id_detail_back_btn;
 
     @Override
@@ -40,7 +43,8 @@ public class DetailActivity extends AppCompatActivity {
         detail_location.setTypeface(text);
         detail_writetime.setTypeface(text);
         detail_score.setTypeface(text);
-
+        score_tv.setTypeface(text);
+        score_tv2.setTypeface(text);
 
 
 

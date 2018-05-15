@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="location">
-        <item>지역을 선택해주세요</item>
+        <item>어디에 있어요?</item>
         <item>서울</item>
         <item>인천</item>
         <item>경기도</item>
