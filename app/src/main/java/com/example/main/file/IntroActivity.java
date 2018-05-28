@@ -1,9 +1,13 @@
 package com.example.main.file;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.main.file.Intro.Intro0;
 import com.example.main.file.Intro.Intro1;
@@ -17,14 +21,16 @@ public class IntroActivity extends AppCompatActivity {
     ViewPager intro_page;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro);
         ButterKnife.bind(this);
-        intro_page.setAdapter(new pagerAdapter(getSupportFragmentManager()));
-        intro_page.setCurrentItem(0);
 
+
+           intro_page.setAdapter(new pagerAdapter(getSupportFragmentManager()));
+           intro_page.setCurrentItem(0);
 
 
 

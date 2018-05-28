@@ -59,7 +59,7 @@ public class InputActivity extends AppCompatActivity {
 
     long now = System.currentTimeMillis();
     Date date = new Date(now);
-    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy년 MM월 dd일");
     String formatDate = sdfNow.format(date);
     @BindView(R.id.scaleRatingBar)  ScaleRatingBar scaleRatingBar;
 

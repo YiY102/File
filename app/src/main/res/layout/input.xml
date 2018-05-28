@@ -158,79 +158,7 @@
         app:srb_drawableEmpty="@drawable/ratingempty"
         app:srb_drawableFilled="@drawable/ratingfull">
     </com.willy.ratingbar.ScaleRatingBar>
-   <!-- <co.ceryle.radiorealbutton.RadioRealButtonGroup
-        android:id="@+id/radioRealButtonGroup_2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-        android:elevation="1dp"
 
-        app:rrbg_animateDrawables_enter="overshoot"
-        app:rrbg_animateDrawables_enterDuration="500"
-        app:rrbg_animateDrawables_exit="overshoot"
-        app:rrbg_animateDrawables_exitDuration="500"
-        app:rrbg_animateDrawables_scale="1.2"
-        app:rrbg_animateTexts_enter="overshoot"
-        app:rrbg_animateTexts_enterDuration="500"
-        app:rrbg_backgroundColor="#FFF"
-        app:rrbg_borderColor="@color/black"
-        app:rrbg_borderSize="2dp"
-        app:rrbg_bottomLineColor="@color/blue_300"
-        app:rrbg_bottomLineRadius="2dp"
-        app:rrbg_bottomLineSize="0dp"
-        app:rrbg_buttonsPaddingTop="14dp"
-        app:rrbg_dividerColor="@color/black"
-        app:rrbg_dividerPadding="5dp"
-        app:rrbg_dividerRadius="1dp"
-        app:rrbg_dividerSize="2dp"
-        app:rrbg_radius="4dp"
-        app:rrbg_selectorAboveOfBottomLine="false"
-        app:rrbg_selectorColor="@color/black"
-        app:rrbg_selectorRadius="1dp"
-        app:rrbg_selectorSize="2dp"
-        app:rrbg_selectorTop="true">
-         app:rrbg_animateDrawables_scale="0.7"는 클릭한버튼 사이즈조절
-        <co.ceryle.radiorealbutton.RadioRealButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:rrb_drawable="@drawable/threelevel"
-            app:rrb_drawableGravity="top"
-            app:rrb_drawableHeight="40dp"
-            app:rrb_drawableWidth="40dp"
-            app:rrb_rippleColor="@color/yellow_600"
-            app:rrb_text="아주좋아요"
-            app:rrb_textColor="@color/black"
-            app:rrb_textSize="12dp"
-            app:rrb_textTypefacePath="fonts/aniron.ttf"
-
-            />
-            ripple은 번짐효과
-        <co.ceryle.radiorealbutton.RadioRealButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:rrb_drawable="@drawable/twolevel"
-            app:rrb_drawableGravity="top"
-            app:rrb_drawableHeight="40dp"
-            app:rrb_drawableWidth="40dp"
-            app:rrb_rippleColor="@color/brown_500"
-            app:rrb_text="보통이예요"
-            app:rrb_textColor="@color/black"
-            app:rrb_textSize="12dp"
-            app:rrb_textTypefacePath="fonts/aniron.ttf"/>
-
-        <co.ceryle.radiorealbutton.RadioRealButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:rrb_drawable="@drawable/onelevel"
-            app:rrb_drawableGravity="top"
-            app:rrb_drawableHeight="40dp"
-            app:rrb_drawableWidth="40dp"
-            app:rrb_rippleColor="@color/black"
-            app:rrb_text="실망이예요"
-            app:rrb_textColor="@color/black"
-            app:rrb_textSize="12dp"
-            app:rrb_textTypefacePath="fonts/aniron.ttf"/>
-    </co.ceryle.radiorealbutton.RadioRealButtonGroup>-->
 
 
     <Button

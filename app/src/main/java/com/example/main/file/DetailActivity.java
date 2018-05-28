@@ -35,16 +35,17 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.detail);
         ButterKnife.bind(this);
 
-        Typeface text = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
-        detail_name.setTypeface(text);
+        Typeface misaeng = Typeface.createFromAsset(getAssets(), "fonts/misaeng.ttf");
+        Typeface dongrami = Typeface.createFromAsset(getAssets(), "fonts/dongrami.ttf");
+        Typeface solmee = Typeface.createFromAsset(getAssets(), "fonts/solmee.ttf");
+        detail_name.setTypeface(solmee);
         detail_name.setSingleLine(true);
-        detail_review.setTypeface(text);
+        detail_review.setTypeface(misaeng);
         detail_review.setMovementMethod(new ScrollingMovementMethod());
-        detail_location.setTypeface(text);
-        detail_writetime.setTypeface(text);
-        detail_score.setTypeface(text);
-        score_tv.setTypeface(text);
-        score_tv2.setTypeface(text);
+        detail_writetime.setTypeface(solmee);
+        detail_score.setTypeface(misaeng);
+        score_tv.setTypeface(misaeng);
+        score_tv2.setTypeface(misaeng);
 
 
 

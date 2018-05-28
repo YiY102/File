@@ -10,6 +10,7 @@
 
 
     <LinearLayout
+
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,44 +22,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
             android:textStyle="bold"
-            android:text=" 강남의 모든 가게가 "
+            android:text=" 직접 다녀오고,"
+            android:layout_marginBottom="10dp"
             android:textSize="30dp" />
 
         <TextView
             android:id="@+id/topText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="20dp"
-            android:text="  한눈에 !"
+            android:layout_gravity="center"
+         android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="  먹어보고,"
             android:textSize="30dp"
             android:textStyle="bold" />
+
         <TextView
-            android:id="@+id/topText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
-            android:text=" 매번 찾아보던 정보가"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-        <TextView
-        android:id="@+id/topText4"
+        android:id="@+id/topText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-            android:layout_gravity="right"
-        android:text="담긴 새로운 어플 ! "
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="35dp"
+        android:text="  남기는 "
         android:textSize="30dp"
         android:textStyle="bold" />
 
-
+        <TextView
+            android:id="@+id/topText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:text="나만의 맛집's"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
 
 

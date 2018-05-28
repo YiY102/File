@@ -5,8 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.main.file.IntroActivity"
-
     android:orientation="vertical">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   android:id="@+id/titletext"
+   android:layout_centerVertical="true"
+    >
+   <TextView
+       android:id="@+id/introtext1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="50dp"
+       android:textSize="35dp"
+       android:text="..."/>
+   <TextView
+       android:id="@+id/introtext2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:textSize="18dp"
+       android:gravity="center_horizontal"
+       android:text="작성한 위치와 이름을 한눈에 보는 간략함"/>
+
+   <TextView
+       android:id="@+id/introtext3"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:textSize="18dp"
+       android:gravity="center_horizontal"
+       android:text="직접 찍은 사진으로 남기는 특별함"/>
+   <TextView
+       android:id="@+id/introtext4"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+       android:textSize="18dp"
+       android:layout_margin="10dp"
+       android:text="작성일을 자동으로 기억해주는 편리함"/>
+
+</LinearLayout>
+
+
+   <TextView
+       android:id="@+id/introtext5"
+       android:layout_below="@+id/titletext"
+       android:layout_marginTop="50dp"
+       android:gravity="center_horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="여기를 누르면 시작합니다(다시보지않기성공)"/>
 
    </RelativeLayout>

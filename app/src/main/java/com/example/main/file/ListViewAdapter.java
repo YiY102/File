@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.main.file.DB.DbManager;
 import com.example.main.file.Model.Content;
 
 import java.util.ArrayList;
@@ -24,12 +26,22 @@ import lombok.NoArgsConstructor;
 /**
  * Created by Main on 2018-04-20.
  */
-@AllArgsConstructor
-@NoArgsConstructor
+
+
 
 public class ListViewAdapter extends BaseAdapter{
     ArrayList<Content>items = new ArrayList<>();
      Context context;
+    DbManager dbManager;
+
+    public ListViewAdapter() {
+    }
+
+    public ListViewAdapter(ArrayList<Content> items, Context context, DbManager dbManager) {
+        this.items = items;
+        this.context = context;
+        this.dbManager = dbManager;
+    }
 
     @Override
     public int getCount() {
